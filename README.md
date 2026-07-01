@@ -271,3 +271,4 @@ KAKAO_CLIENT_SECRET=""
 cd client && npm run build      # client/dist 생성
 cd ../server && npm start       # NODE_ENV=production 권장
 ```
+## 다음을 수정했슴 -- git에 commit함
