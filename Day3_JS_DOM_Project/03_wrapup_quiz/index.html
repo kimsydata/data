@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wrap-up Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9fafb; }
+    .quiz { max-width: 700px; background: white; padding: 24px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+    .question { margin-bottom: 20px; }
+    button { padding: 12px 16px; border: 0; background: #2563eb; color: white; border-radius: 8px; cursor: pointer; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="quiz">
+    <h1>HTML/CSS/JavaScript Wrap-up Quiz</h1>
+
+    <div class="question">
+      <p>1. 웹페이지의 구조를 만드는 언어는?</p>
+      <label><input type="radio" name="q1" value="HTML"> HTML</label><br>
+      <label><input type="radio" name="q1" value="CSS"> CSS</label><br>
+      <label><input type="radio" name="q1" value="JavaScript"> JavaScript</label>
+    </div>
+
+    <div class="question">
+      <p>2. 웹페이지의 디자인을 담당하는 언어는?</p>
+      <label><input type="radio" name="q2" value="HTML"> HTML</label><br>
+      <label><input type="radio" name="q2" value="CSS"> CSS</label><br>
+      <label><input type="radio" name="q2" value="JavaScript"> JavaScript</label>
+    </div>
+
+    <div class="question">
+      <p>3. 버튼 클릭 같은 동작을 처리하는 언어는?</p>
+      <label><input type="radio" name="q3" value="HTML"> HTML</label><br>
+      <label><input type="radio" name="q3" value="CSS"> CSS</label><br>
+      <label><input type="radio" name="q3" value="JavaScript"> JavaScript</label>
+    </div>
+
+    <button id="submitBtn">점수 확인</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

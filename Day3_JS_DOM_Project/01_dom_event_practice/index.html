@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM/Event 실습</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 520px; }
+    input, button { padding: 10px; margin-top: 8px; }
+    input { width: 70%; }
+    button { cursor: pointer; }
+    li { margin: 8px 0; padding: 10px; background: #f3f4f6; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DOM & Event Handling</h1>
+    <p>입력값을 읽고, 버튼 클릭 이벤트로 화면에 항목을 추가합니다.</p>
+
+    <input id="todoInput" type="text" placeholder="오늘 할 일을 입력하세요" />
+    <button id="addBtn">추가</button>
+
+    <ul id="todoList"></ul>
+  </div>
+
+  <script>
+    const todoInput = document.getElementById("todoInput");
+    const addBtn = document.getElementById("addBtn");
+    const todoList = document.getElementById("todoList");
+
+    addBtn.addEventListener("click", addTodo);
+    todoInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        addTodo();
+      }
+    });
+
+    function addTodo() {
+      const text = todoInput.value.trim();
+
+      if (text === "") {
+        alert("할 일을 입력하세요.");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = text;
+
+      li.addEventListener("click", function() {
+        li.style.textDecoration = "line-through";
+      });
+
+      todoList.appendChild(li);
+      todoInput.value = "";
+      todoInput.focus();
+    }
+  </script>
+</body>
+</html>

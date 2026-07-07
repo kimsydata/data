@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입 결과</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .card { max-width: 520px; padding: 20px; border: 1px solid #ddd; border-radius: 12px; background: #f9fafb; }
+    .item { margin: 10px 0; }
+    a { display: inline-block; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>회원가입 결과</h1>
+  <div class="card" id="result"></div>
+  <a href="index.html">다시 입력하기</a>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const interests = params.getAll("interest");
+
+    document.getElementById("result").innerHTML = `
+      <div class="item"><strong>이름:</strong> ${params.get("username") || "없음"}</div>
+      <div class="item"><strong>이메일:</strong> ${params.get("email") || "없음"}</div>
+      <div class="item"><strong>학습 수준:</strong> ${params.get("level") || "없음"}</div>
+      <div class="item"><strong>관심 분야:</strong> ${interests.length ? interests.join(", ") : "선택 안 함"}</div>
+      <div class="item"><strong>메모:</strong> ${params.get("memo") || "없음"}</div>
+    `;
+  </script>
+</body>
+</html>

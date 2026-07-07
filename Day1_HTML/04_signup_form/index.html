@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입 Form 실습</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    form { max-width: 460px; padding: 20px; border: 1px solid #ddd; border-radius: 12px; }
+    label { display: block; margin-top: 14px; font-weight: bold; }
+    input, select, textarea, button { width: 100%; padding: 10px; margin-top: 6px; box-sizing: border-box; }
+    button { margin-top: 18px; background: #2563eb; color: white; border: 0; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>회원가입 실습</h1>
+  <p>입력한 값은 다음 페이지에서 확인됩니다.</p>
+
+  <form action="result.html" method="get">
+    <label for="username">이름</label>
+    <input id="username" name="username" type="text" placeholder="홍길동" required />
+
+    <label for="email">이메일</label>
+    <input id="email" name="email" type="email" placeholder="test@example.com" required />
+
+    <label for="password">비밀번호</label>
+    <input id="password" name="password" type="password" minlength="4" required />
+
+    <label for="level">학습 수준</label>
+    <select id="level" name="level">
+      <option value="beginner">초급</option>
+      <option value="intermediate">중급</option>
+      <option value="advanced">고급</option>
+    </select>
+
+    <label>관심 분야</label>
+    <input type="checkbox" name="interest" value="HTML" /> HTML
+    <input type="checkbox" name="interest" value="CSS" /> CSS
+    <input type="checkbox" name="interest" value="JavaScript" /> JavaScript
+
+    <label for="memo">메모</label>
+    <textarea id="memo" name="memo" rows="4" placeholder="배우고 싶은 내용을 적어보세요."></textarea>
+
+    <button type="submit">가입하기</button>
+  </form>
+</body>
+</html>

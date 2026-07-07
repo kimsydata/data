@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Workflow 실습</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+    h1 { color: #1f2937; }
+    .box { border: 1px solid #ccc; padding: 16px; margin: 12px 0; border-radius: 10px; }
+    .step { background: #f3f4f6; }
+    button { padding: 10px 14px; border: 0; border-radius: 8px; cursor: pointer; }
+    #result { background: #ecfeff; border-color: #06b6d4; }
+  </style>
+</head>
+<body>
+  <h1>Internet / WWW / HTTP 흐름 이해</h1>
+  <p>브라우저가 웹페이지를 요청하고 서버가 응답하는 흐름을 단계별로 확인합니다.</p>
+
+  <div class="box step">1. 사용자가 브라우저 주소창에 URL을 입력합니다.</div>
+  <div class="box step">2. 브라우저가 서버에 HTTP Request를 보냅니다.</div>
+  <div class="box step">3. 서버가 HTML, CSS, JavaScript 파일을 응답합니다.</div>
+  <div class="box step">4. 브라우저가 파일을 해석해서 화면에 보여줍니다.</div>
+
+  <button onclick="showWorkflow()">HTTP 흐름 확인하기</button>
+
+  <div id="result" class="box"></div>
+
+  <script>
+    function showWorkflow() {
+      const result = document.getElementById("result");
+      result.innerHTML = `
+        <strong>실행 결과</strong><br>
+        Browser → HTTP Request → Web Server → HTTP Response → Browser Rendering
+      `;
+    }
+  </script>
+</body>
+</html>

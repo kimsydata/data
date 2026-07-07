@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM / Async / Modules 미니 프로젝트</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>나의 여행지 추천 앱</h1>
+    <p>DOM, Event, Async, Module을 함께 사용하는 미니 프로젝트</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="loadBtn">여행지 불러오기</button>
+      <button id="clearBtn">화면 지우기</button>
+    </section>
+
+    <section id="message" class="message">버튼을 눌러 여행지를 불러오세요.</section>
+    <section id="cardList" class="card-list"></section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
