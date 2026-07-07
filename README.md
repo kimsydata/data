@@ -55,3 +55,5 @@ Day3_JS_DOM_Project/
 1. Day1: HTML 구조, 요소, 속성, 폼, 링크, 이미지, 시맨틱 태그
 2. Day2: CSS 선택자, 박스 모델, Flex/Grid, 반응형, 애니메이션, JavaScript 기본 문법
 3. Day3: DOM 조작, 이벤트 처리, 비동기 처리, 모듈 분리, 퀴즈 프로젝트
+
+# 수정 첵크 -- 0707
